@@ -1,19 +1,16 @@
-let totalCash = prompt("Йо, Кевин, сколько кеша у тебя в наличии?");
+const totalCash = parseInt(prompt("Йо, Кевин, сколько кеша у тебя в наличии?"));
 
-let watchesCount = prompt("Сколько часов ты взял?");
+const watchesCount = parseInt(prompt("Сколько часов ты взял?"));
 
-let earringsCount = prompt("Ага, а сколько сережек с брилиантами?");
+const earringsCount = parseInt(prompt("Ага, а сколько сережек с брилиантами?"));
 
-let watchesCost = prompt("Сколько стоят часы?");
+const watchesCost = parseInt(prompt("Сколько стоят часы?"));
 
-let earringsCost = prompt("Сколько стоят сережки?");
+const earringsCost = parseInt(prompt("Сколько стоят сережки?"));
 
-let earringsSum = parseInt(earringsCount) * parseInt(earringsCost);
+const totalPurchases =
+  earringsCount * earringsCost + watchesCount * watchesCost;
 
-let watchesSum = parseInt(watchesCount) * parseInt(watchesCost);
-
-let totalPurchases = earringsSum + watchesSum;
-
-let totalBalance = parseInt(totalCash) >= totalPurchases;
+const totalBalance = totalCash >= totalPurchases;
 
 document.body.innerHTML = totalBalance;
